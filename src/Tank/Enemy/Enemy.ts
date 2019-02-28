@@ -60,6 +60,7 @@ class GameEnemy extends BaseCom {
 		this.move();
 		console.log("djfldjljflljfldjlfj");
 		console.log("djfldjljflljfldjlfj");
+		console.log("this is a test");
 	//	console.log("跑的方向" + this.RunDirection + "-----------------num" + _num + "----------方向" + MoveDirection.UP);
 	}
 }
