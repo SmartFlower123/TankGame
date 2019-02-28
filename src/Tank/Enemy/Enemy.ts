@@ -58,6 +58,7 @@ class GameEnemy extends BaseCom {
 		// 	}
 		// }
 		this.move();
+		console.log("this is a dev branch");
 	//	console.log("跑的方向" + this.RunDirection + "-----------------num" + _num + "----------方向" + MoveDirection.UP);
 	}
 }
