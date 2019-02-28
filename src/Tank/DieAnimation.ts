@@ -1,0 +1,4 @@
+class DieAnimation {
+	public constructor() {
+	}
+}

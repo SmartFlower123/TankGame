@@ -1,0 +1,20 @@
+{
+	"groups": [
+		{
+			"keys": "Joystick,Joystick_atlas0",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/Joystick.fui",
+			"type": "bin",
+			"name": "Joystick"
+		},
+		{
+			"url": "assets/Joystick_atlas0.png",
+			"type": "image",
+			"name": "Joystick_atlas0"
+		}
+	]
+}

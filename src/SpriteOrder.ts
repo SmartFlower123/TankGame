@@ -1,0 +1,5 @@
+class SpriteOrder {
+	
+	public constructor() {
+	}
+}
