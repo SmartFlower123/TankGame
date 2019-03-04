@@ -17,7 +17,7 @@ var EnemyManager = (function () {
     /**创建 */
     EnemyManager.prototype.createItem = function (_comParent, spriteOrder, identity, startPos, resName, anthor) {
         if (identity === void 0) { identity = Identity.ENEMY; }
-        if (resName === void 0) { resName = "Player1_01"; }
+        if (resName === void 0) { resName = "Enemys_03"; }
         if (anthor === void 0) { anthor = new egret.Point(0.56, 0.08); }
         var _item = this.setPlay(_comParent, spriteOrder, identity, startPos, anthor, resName);
         this.m_bornTime = egret.getTimer();
@@ -29,20 +29,19 @@ var EnemyManager = (function () {
         }, this, 400);
         return _item;
     };
-    Object.defineProperty(EnemyManager.prototype, "BornTime", {
-        get: function () {
-            return this.m_bornTime;
-        },
-        enumerable: true,
-        configurable: true
-    });
+    // public get BornTime() {
+    // 	return this.m_bornTime;
+    // }
+    EnemyManager.prototype.setCanMove = function (item) {
+        item.setCanMove();
+    };
     /**销毁 */
     EnemyManager.prototype.DestoryCom = function (_item, identity) {
         //从数组中移除
         var _bulletArray = QueueManager.Instance.cretateQueue(identity);
         _bulletArray.removeItem(_item);
         //从舞台上移除
-        _item.setCanMove(false);
+        //_item.setCanMove(false);
         //销毁
         _item.DestoryCom();
     };

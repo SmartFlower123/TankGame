@@ -1,6 +1,7 @@
 class Bullet extends BaseCom {
 	private m_deltaTime: number;
 	private m_isDistoryBullet: boolean;
+	private m_bornTime: number;
 	protected constructFromXML(xml: any) {
 		super.constructFromXML(xml);
 		this.initState();
@@ -15,6 +16,13 @@ class Bullet extends BaseCom {
 		this.canMove = false;
 		this.m_isDistoryBullet = false;
 	}
+	public get BornTime() {
+		this.m_bornTime = egret.getTimer();
+		return this.m_bornTime;
+	}
+	// public set BornTime(time: number) {
+	// 	this.m_bornTime = time;
+	// }
 	public setCanMove(canMove: boolean) {
 		this.canMove = canMove;
 	}

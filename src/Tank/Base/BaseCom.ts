@@ -8,7 +8,6 @@ class BaseCom extends fairygui.GComponent {
 
 	public constructor() {
 		super();
-
 	}
 	protected constructFromXML(xml: any): void {
 		super.constructFromXML(xml);
@@ -20,6 +19,9 @@ class BaseCom extends fairygui.GComponent {
 	}
 	public get RunDirection() {
 		return this.runDirection;
+	}
+	public setCanMove(move:boolean=false){
+          this.canMove=move;
 	}
 	public setLoaderUrl(iconName: string, iconType: ContentName): any {
 		let _url = fairygui.UIPackage.getItemURL("Joystick", iconName);
@@ -41,6 +43,7 @@ class BaseCom extends fairygui.GComponent {
 	}
 	/**移动 */
 	public move() {
+		if(!this.canMove) return;
 		var _direction = this.runDirection;
 		if (_direction == MoveDirection.UP) {
 			this.y -= this.speed;
@@ -83,6 +86,7 @@ class BaseCom extends fairygui.GComponent {
 		this.m_loader = this.getChild("loader").asLoader;
 		this.m_loader.width = this.width;
 		this.m_loader.height = this.height;
+		this.canMove=true;
 	}
 }
 

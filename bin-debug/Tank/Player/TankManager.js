@@ -32,20 +32,16 @@ var TankManager = (function () {
         }, this, 400);
         return _item;
     };
-    Object.defineProperty(TankManager.prototype, "BornTime", {
-        get: function () {
-            return this.m_bornTime;
-        },
-        enumerable: true,
-        configurable: true
-    });
+    TankManager.prototype.setCanMove = function (item) {
+        item.setCanMove();
+    };
     /**销毁 */
     TankManager.prototype.DestoryCom = function (_item, identity) {
         //从数组中移除
         var _bulletArray = QueueManager.Instance.cretateQueue(identity);
         _bulletArray.removeItem(_item);
         //从舞台上移除
-        _item.setCanMove(false);
+        //_item.setCanMove(false);
         //销毁
         _item.DestoryCom();
     };

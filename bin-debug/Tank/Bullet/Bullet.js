@@ -23,6 +23,17 @@ var Bullet = (function (_super) {
         this.canMove = false;
         this.m_isDistoryBullet = false;
     };
+    Object.defineProperty(Bullet.prototype, "BornTime", {
+        get: function () {
+            this.m_bornTime = egret.getTimer();
+            return this.m_bornTime;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    // public set BornTime(time: number) {
+    // 	this.m_bornTime = time;
+    // }
     Bullet.prototype.setCanMove = function (canMove) {
         this.canMove = canMove;
     };

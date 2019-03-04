@@ -28,6 +28,10 @@ var BaseCom = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    BaseCom.prototype.setCanMove = function (move) {
+        if (move === void 0) { move = false; }
+        this.canMove = move;
+    };
     BaseCom.prototype.setLoaderUrl = function (iconName, iconType) {
         var _url = fairygui.UIPackage.getItemURL("Joystick", iconName);
         this.m_loader.url = _url;
@@ -56,6 +60,8 @@ var BaseCom = (function (_super) {
     };
     /**移动 */
     BaseCom.prototype.move = function () {
+        if (!this.canMove)
+            return;
         var _direction = this.runDirection;
         if (_direction == MoveDirection.UP) {
             this.y -= this.speed;
@@ -98,6 +104,7 @@ var BaseCom = (function (_super) {
         this.m_loader = this.getChild("loader").asLoader;
         this.m_loader.width = this.width;
         this.m_loader.height = this.height;
+        this.canMove = true;
     };
     return BaseCom;
 }(fairygui.GComponent));

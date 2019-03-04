@@ -31,12 +31,14 @@ var MoveDirection;
 //渲染循序
 var SpritOrder;
 (function (SpritOrder) {
-    SpritOrder[SpritOrder["HEART"] = 0] = "HEART";
-    SpritOrder[SpritOrder["BULLET"] = 1] = "BULLET";
-    SpritOrder[SpritOrder["TANK"] = 2] = "TANK";
-    SpritOrder[SpritOrder["ENEMY"] = 3] = "ENEMY";
-    SpritOrder[SpritOrder["BORNANIMATION"] = 4] = "BORNANIMATION";
-    SpritOrder[SpritOrder["DIEANIMATION"] = 5] = "DIEANIMATION";
+    SpritOrder[SpritOrder["AIRBARRIR"] = 0] = "AIRBARRIR";
+    SpritOrder[SpritOrder["HEART"] = 1] = "HEART";
+    SpritOrder[SpritOrder["BULLET"] = 2] = "BULLET";
+    SpritOrder[SpritOrder["TANK"] = 3] = "TANK";
+    SpritOrder[SpritOrder["ENEMY"] = 4] = "ENEMY";
+    SpritOrder[SpritOrder["BORNANIMATION"] = 5] = "BORNANIMATION";
+    SpritOrder[SpritOrder["DIEANIMATIO"] = 6] = "DIEANIMATIO";
+    SpritOrder[SpritOrder["WALL"] = 7] = "WALL";
 })(SpritOrder || (SpritOrder = {}));
 //出生顺序
 var BornNum;

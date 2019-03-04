@@ -30,6 +30,7 @@
 		"bin-debug/Tank/Enemy/Enemy.js",
 		"bin-debug/Tank/Enemy/EnemyManager.js",
 		"bin-debug/Tank/Extension/RegisterClass.js",
+		"bin-debug/Tank/MapCreation/MapCreation.js",
 		"bin-debug/Tank/Player/GamePlayer.js",
 		"bin-debug/Tank/Player/TankManager.js",
 		"bin-debug/Tank/Queue/GameQueue.js",

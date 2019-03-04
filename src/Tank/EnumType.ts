@@ -23,12 +23,15 @@ enum MoveDirection {
 }
 //渲染循序
 enum SpritOrder {
+	AIRBARRIR,
 	HEART,
 	BULLET,
 	TANK,
 	ENEMY,
 	BORNANIMATION,
-	DIEANIMATION
+	DIEANIMATIO,
+	WALL,
+
 }
 //出生顺序
 enum BornNum {
